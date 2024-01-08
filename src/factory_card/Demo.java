@@ -8,7 +8,7 @@ public class Demo {
     private static CardCreator cardCreator;
 
     public static void main(String[] args){
-        cardCreator = new DebitCardCreator();
+        //cardCreator = new DebitCardCreator();
         configure("debit");
         runBusinessLogic();
     }
