@@ -14,4 +14,9 @@ public class NoticeHistory {
     }
 
     public boolean isEmpty() { return history.isEmpty(); }
+
+    @Override
+    public String toString() {
+        return history.toString();
+    }
 }

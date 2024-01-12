@@ -6,16 +6,9 @@ import command.notices.NoticeHistory;
 import command.notices.SmsNotice;
 
 public class Sender {
-    private NoticeHistory history = new NoticeHistory();
+    public NoticeHistory history = new NoticeHistory();
 
-    public void init() {
-        Sender sender = this;
-        executeCommand(new SmsNotice(sender));
-        executeCommand(new EmailNotice(sender));
-
-    }
-
-    private void executeCommand(Notice notice) {
+    public void executeCommand(Notice notice) {
         if (notice.send()) {
             history.push(notice);
         }
